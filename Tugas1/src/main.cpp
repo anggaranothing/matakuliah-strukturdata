@@ -112,9 +112,10 @@ void TambahBuku()
 
         cin.ignore();
         printf( "\nJudul: " ); cin.getline( newBook.judul , 32 );
-        printf( "\nPengarang: " ); scanf( " %31s" , newBook.pengarang );
+        printf( "\nPengarang: " ); cin.getline( newBook.pengarang , 32 );
         printf( "\nTahun: " ); scanf( " %u" , &newBook.tahun );
-        printf( "\nPenerbit: " ); scanf( " %31s" , newBook.penerbit );
+        cin.ignore();
+        printf( "\nPenerbit: " ); cin.getline( newBook.penerbit , 32 );
 
         g_daftarBuku[g_uiDataTerkumpul] = newBook;
         g_uiDataTerkumpul++;
@@ -123,6 +124,7 @@ void TambahBuku()
     {
         printf( "Daftar buku sudah memenuhi batas maksimum." );
     }
+
 
     PauseSebelumKeMenuUtama();
 }
