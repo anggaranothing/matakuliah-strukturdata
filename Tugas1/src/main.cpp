@@ -8,6 +8,7 @@
 
 #include <iostream>
 
+using std::cin;
 using std::scanf;
 using std::printf;
 using std::system;
@@ -53,7 +54,7 @@ void TampilkanMenuUtama()
     printf( "\nPilihan anda: " );
 
     unsigned int choice;
-    scanf( "%u" , &choice );
+    scanf( " %u" , &choice );
     switch(choice)
     {
         case 1 : TampilkanInfoBuku(); break;
@@ -109,7 +110,8 @@ void TambahBuku()
 
         buku newBook;
 
-        printf( "\nJudul: " ); scanf( " %31s" , newBook.judul );
+        cin.ignore();
+        printf( "\nJudul: " ); cin.getline( newBook.judul , 32 );
         printf( "\nPengarang: " ); scanf( " %31s" , newBook.pengarang );
         printf( "\nTahun: " ); scanf( " %u" , &newBook.tahun );
         printf( "\nPenerbit: " ); scanf( " %31s" , newBook.penerbit );
