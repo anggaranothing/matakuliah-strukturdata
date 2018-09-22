@@ -83,7 +83,7 @@ void TampilkanDaftarBuku()
         {
             currentBook = g_daftarBuku[i];
 
-            printf( "=== Buku ke-%u ===" , i );
+            printf( "=== Buku ke-%u ===" , i+1 );
             printf( "\nJudul: %s" , currentBook.judul );
             printf( "\nPengarang: %s" , currentBook.pengarang );
             printf( "\nTahun: %u" , currentBook.tahun );
@@ -105,12 +105,14 @@ void TambahBuku()
 
     if( g_uiDataTerkumpul < MAXIMUM_DATA )
     {
+        printf( "Sisa ruang array: %u\n" , MAXIMUM_DATA - g_uiDataTerkumpul );
+
         buku newBook;
 
-        printf( "Judul: " ); scanf( "%31s" , newBook.judul );
-        printf( "\nPengarang: " ); scanf( "%31s" , newBook.pengarang );
-        printf( "\nTahun: " ); scanf( "%u" , &newBook.tahun );
-        printf( "\nPenerbit: " ); scanf( "%31s" , newBook.penerbit );
+        printf( "\nJudul: " ); scanf( " %31s" , newBook.judul );
+        printf( "\nPengarang: " ); scanf( " %31s" , newBook.pengarang );
+        printf( "\nTahun: " ); scanf( " %u" , &newBook.tahun );
+        printf( "\nPenerbit: " ); scanf( " %31s" , newBook.penerbit );
 
         g_daftarBuku[g_uiDataTerkumpul] = newBook;
         g_uiDataTerkumpul++;
