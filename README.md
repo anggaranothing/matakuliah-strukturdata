@@ -7,3 +7,7 @@ Kumpulan *source code* dan materi kuliah struktur data.
 * MinGW 5.3.0 edisi 64-bit
 * Standar c++17
 * Visual Studio Code
+
+## Cara compile
+Silahkan dibaca `CARA_COMPILE.MD`. Terima kasih.
+
