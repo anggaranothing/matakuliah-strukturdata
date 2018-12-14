@@ -8,6 +8,6 @@ Kumpulan *source code* dan materi kuliah struktur data.
 * Standar c++17
 * Visual Studio Code
 
-## Cara compile
-Silahkan dibaca `CARA_COMPILE.MD`. Terima kasih.
+## Cara *compile*
+Silahkan di baca `CARA_COMPILE.MD`. Terima kasih.
 
